@@ -1,0 +1,6 @@
+Abrir proyecto en 
+http://localhost/JISUSU/InduMac2/
+
+## Hacer un commit en el mismo commit
+1. git commit --amend --no-edit.
+

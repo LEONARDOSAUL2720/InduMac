@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 40px;
+    border: 2px solid #fffcf3; /* Color del borde */
+    margin: 0.5rem;
+    margin-bottom: 5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra agregada */
+    padding: 10px;
+    /* Agregar padding interno si es necesario */
+    background-color: #ffffff;
+    /* Fondo blanco */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    max-width: 100%;
+    /* Ajustar el tamaño del carrusel */
+    margin: auto;
+    /* Centrar el carrusel */
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    transition: all 0.1s ease-in-out;
+    /* Transición suave al pasar el ratón */
+    border-radius: 15px;
+    border: 2px solid #fffcf3;
+}
+
+.carousel-item img {
+    height: auto;
+    width: 25%;
+    object-fit: cover;
+    margin: 0 10px;
+    /* Margen entre imágenes */
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    /* Bordes redondeados para los elementos del carrusel */
+    overflow: hidden;
+    /* Evitar que los bordes de las imágenes se salgan */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.additional-info {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    display: none; /* Asegúrate de que esté oculto por defecto */
+}
+
+.additional-info img,
+.additional-info video {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.info-display {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.info-container {
+    margin: 4rem;
+    box-shadow: 30px 40px 40px rgba(0, 0, 0, 0.1);
+    border: 2px solid #fffcf3; /* Color del borde igual al header */
+}
+
+.info-container .col-md-7,
+.info-container .col-md-5 {
+    margin-bottom: 2rem; /* Reduce el margen inferior de las columnas */
+    
+}
+
+.info-container .p-4 {
+    padding: rem; /* Reduce el padding interno */
+}
+
+.info-container h2 {
+    font-size: 2.6rem !important; /* Ajusta el tamaño de fuente a un valor más razonable y usa !important */
+    font-family: inherit; /* Hereda la familia de fuentes del contenedor padre */
+    margin: 0; /* Ajusta el margen según sea necesario */
+    font-weight: 800; /* Ajusta el peso de la fuente */
+    color: #051537;
+}
+
+.img-header {
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 10px 50px;
+    height: auto;
+    width: 100%;
+    color: rgb(3, 13, 54);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right img {
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: inherit; /* Asegura que herede la familia de fuentes */
+}
+
+.info-container h2 {
+    max-width: 200rem;
+    font-size: 4rem; /* Aplica el mismo tamaño de fuente que el h1 */
+    font-family: inherit; /* Hereda la familia de fuentes del contenedor padre */
+    margin: 0; /* Ajusta el margen según sea necesario */
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    margin: 0 auto;
+    /* Elimina márgenes innecesarios */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 5s steps(40, end) forwards, blink 0.80s step-end infinite;
+}
+
+/* Para mejorar la responsividad en pantallas pequeñas */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 1.2rem;
+        /* Reduce el tamaño en móviles */
+        border-right: 2px solid white;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-text {
+        font-size: 1rem;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.btn-dark-custom {
+    background-color: #192a56; /* Color crema */
+    color: #fffcf3; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    margin: 1rem;
+    width: 10rem;
+    /* Ancho del botón */
+    text-align: center;
+    font-weight: 900;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.text-center {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.text-center h3 {
+    font-size: 2rem; /* Ajusta el tamaño de fuente */
+    font-family: inherit; /* Hereda la familia de fuentes del contenedor padre */
+    font-weight: 900; /* Ajusta el peso de la fuente */
+    color: rgb(3, 13, 54); /* Ajusta el color de la fuente */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Ajusta la sombra del texto */
+    margin: 0; /* Ajusta el margen según sea necesario */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #051537;
+    padding: 20px 0; /* Aumenta el padding */
+    text-align: center;
+    color: white;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+}
+
+footer a {
+    color: white;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos personalizados para los botones del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #192a56; /* Color de fondo */
+    border-radius: 50%; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #023222; /* Color de fondo al pasar el ratón */
+    color: #192a56; /* Color del icono al pasar el ratón */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%; /* Ajusta el ancho del área de los botones */
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-size: 2rem; /* Ajusta el tamaño del icono */
+}
+
+/* Ajustes adicionales para mejorar la responsividad */
+@media (max-width: 576px) {
+    .info-container .col-md-10,
+    .info-container .col-md-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .info-container h2 {
+        font-size: 1.8rem !important; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+}
