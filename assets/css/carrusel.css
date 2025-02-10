@@ -1,0 +1,75 @@
+.carousel-container {
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+    border-radius: 15px;
+    border: 2px solid #fffcf3;
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 10px; /* Espacio entre las imágenes */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #192a56;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #023222;
+    color: #192a56;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-size: 2rem;
+}

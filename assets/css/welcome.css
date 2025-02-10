@@ -28,45 +28,31 @@ header {
     overflow: hidden;
 }
 
-.carousel-container {
-    max-width: 100%;
-    /* Ajustar el tamaño del carrusel */
-    margin: auto;
-    /* Centrar el carrusel */
-    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
-    transition: all 0.1s ease-in-out;
-    /* Transición suave al pasar el ratón */
-    border-radius: 15px;
-    border: 2px solid #fffcf3;
-}
-
-.carousel-item img {
-    height: auto;
-    width: 25%;
-    object-fit: cover;
-    margin: 0 10px;
-    /* Margen entre imágenes */
-}
-
-.carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    /* Bordes redondeados para los elementos del carrusel */
-    overflow: hidden;
-    /* Evitar que los bordes de las imágenes se salgan */
-}
-
-.carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+}
+
+.grid-item {
+    background-color: #f8f9fa;
+    border: 2px solid #fffcf3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 .additional-info {
@@ -87,6 +73,12 @@ header {
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 5px;
+    opacity: 0; /* Ocultar inicialmente */
+    transition: opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+.info-display.show {
+    opacity: 1; /* Mostrar con transición */
 }
 
 .info-container {
@@ -275,41 +267,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Estilos personalizados para los botones del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #192a56; /* Color de fondo */
-    border-radius: 50%; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: #023222; /* Color de fondo al pasar el ratón */
-    color: #192a56; /* Color del icono al pasar el ratón */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%; /* Ajusta el ancho del área de los botones */
-}
-
-.carousel-control-prev-icon::before,
-.carousel-control-next-icon::before {
-    font-size: 2rem; /* Ajusta el tamaño del icono */
-}
-
-/* Ajustes adicionales para mejorar la responsividad */
-@media (max-width: 576px) {
-    .info-container .col-md-10,
-    .info-container .col-md-5 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .info-container h2 {
-        font-size: 1.8rem !important; /* Ajusta el tamaño de fuente para pantallas pequeñas */
-    }
 }
